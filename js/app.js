@@ -12,6 +12,8 @@ const searchWeather = () => {
         .then(res => res.json())
         .then(data => displayWeather(data)
         );
+    } else {
+      alert('PLEASE ENTER A CITY');
     }
 }
 
