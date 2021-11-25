@@ -56,39 +56,39 @@ const displayWeather = weather => {
     imgIcon = document.getElementById('weather-icon-hour-now');
     imgIcon.setAttribute('src',url);
     
-    d = new Date(weather.list[5].dt * 1000);
+    d = new Date(weather.list[12].dt * 1000);
     dayName = days[d.getDay()];
     setInnerText('weather-time1', dayName);
-    setInnerText('weather-hour1', weather.list[5].main.temp);
+    setInnerText('weather-hour1', weather.list[12].main.temp);
     //set icon
-    url = `http://openweathermap.org/img/wn/${weather.list[5].weather[0].icon}@2x.png`;
+    url = `http://openweathermap.org/img/wn/${weather.list[12].weather[0].icon}@2x.png`;
     imgIcon = document.getElementById('weather-icon-hour1');
     imgIcon.setAttribute('src',url);
     
-    d = new Date(weather.list[13].dt * 1000);
+    d = new Date(weather.list[20].dt * 1000);
     dayName = days[d.getDay()];
     setInnerText('weather-time2', dayName);
-    setInnerText('weather-hour2', weather.list[13].main.temp);
+    setInnerText('weather-hour2', weather.list[20].main.temp);
     //set icon
-    url = `http://openweathermap.org/img/wn/${weather.list[13].weather[0].icon}@2x.png`;
+    url = `http://openweathermap.org/img/wn/${weather.list[20].weather[0].icon}@2x.png`;
     imgIcon = document.getElementById('weather-icon-hour2');
     imgIcon.setAttribute('src',url);
     
-    d = new Date(weather.list[21].dt * 1000);
+    d = new Date(weather.list[28].dt * 1000);
     dayName = days[d.getDay()];
     setInnerText('weather-time3', dayName);
-    setInnerText('weather-hour3', weather.list[21].main.temp);
+    setInnerText('weather-hour3', weather.list[28].main.temp);
     //set icon
-    url = `http://openweathermap.org/img/wn/${weather.list[21].weather[0].icon}@2x.png`;
+    url = `http://openweathermap.org/img/wn/${weather.list[28].weather[0].icon}@2x.png`;
     imgIcon = document.getElementById('weather-icon-hour3');
     imgIcon.setAttribute('src',url);
     
-    d = new Date(weather.list[29].dt * 1000);
+    d = new Date(weather.list[36].dt * 1000);
     dayName = days[d.getDay()];
     setInnerText('weather-time4', dayName);
-    setInnerText('weather-hour4', weather.list[29].main.temp);
+    setInnerText('weather-hour4', weather.list[36].main.temp);
     //set icon
-    url = `http://openweathermap.org/img/wn/${weather.list[29].weather[0].icon}@2x.png`;
+    url = `http://openweathermap.org/img/wn/${weather.list[36].weather[0].icon}@2x.png`;
     imgIcon = document.getElementById('weather-icon-hour4');
     imgIcon.setAttribute('src',url);
 
