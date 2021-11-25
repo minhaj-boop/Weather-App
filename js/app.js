@@ -10,7 +10,8 @@ const searchWeather = () => {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchText}&appid=${API_KEY}&units=metric`;
         fetch(url)
         .then(res => res.json())
-        .then(data => displayWeather(data));
+        .then(data => displayWeather(data)
+        );
     }
 }
 
@@ -30,6 +31,9 @@ const setInnerText = (id,text) => {
 }
 
 const displayWeather = weather => {
+    if(weather.cod === '404'){
+      alert(weather.message.toUpperCase());
+    }
     setInnerText('weather-name', weather.city.name);
     setInnerText('weather-temp', weather.list[0].main.temp);
     setInnerText('weather-description', weather.list[0].weather[0].description.toUpperCase());
