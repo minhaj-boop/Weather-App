@@ -119,7 +119,7 @@ const displayWeather = weather => {
           break;
         case "Rain":
           document.getElementById("bg-body").style.backgroundImage =
-            "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')";
+            "url('https://i.pinimg.com/originals/2b/04/c2/2b04c252b82e9f1b4770e41c139e0fb9.gif')";
           document.getElementById("bg-body").style.backgroundRepeat =
             "no-repeat";
           document.getElementById("bg-body").style.backgroundSize =
@@ -127,7 +127,7 @@ const displayWeather = weather => {
           break;
         case "Clear":
           document.getElementById("bg-body").style.backgroundImage =
-            "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')";
+            "url('https://i.pinimg.com/originals/64/ae/15/64ae1599d5869869610983f2f02db226.gif')";
           document.getElementById("bg-body").style.backgroundRepeat =
             "no-repeat";
           document.getElementById("bg-body").style.backgroundSize =
