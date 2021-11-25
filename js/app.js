@@ -101,7 +101,7 @@ const displayWeather = weather => {
     switch (main) {
         case "Snow":
           document.getElementById("bg-body").style.backgroundImage =
-            "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')";
+            "url('https://cdn.lowgif.com/small/8388a4d9b4c11237-winter-forest-mountain-snow-moon-nature-hd-wallpaper.gif')";
           document.getElementById("bg-body").style.backgroundRepeat =
             "no-repeat";
           document.getElementById("bg-body").style.backgroundSize =
