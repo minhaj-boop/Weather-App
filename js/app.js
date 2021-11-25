@@ -5,7 +5,6 @@ const searchWeather = () => {
     const city = document.getElementById('search-city');
     const searchText = city.value;
     city.value='';
-    console.log(searchText);
     if(searchText !== '') {
         
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchText}&appid=${API_KEY}&units=metric`;
@@ -31,10 +30,9 @@ const setInnerText = (id,text) => {
 }
 
 const displayWeather = weather => {
-    console.log(weather);
     setInnerText('weather-name', weather.city.name);
     setInnerText('weather-temp', weather.list[0].main.temp);
-    setInnerText('weather-description', weather.list[0].weather[0].description);
+    setInnerText('weather-description', weather.list[0].weather[0].description.toUpperCase());
     setInnerText('weather-pressure', weather.list[0].main.pressure);
     setInnerText('weather-humidity', weather.list[0].main.humidity);
     
@@ -96,32 +94,60 @@ const displayWeather = weather => {
     let main = weather.list[0].weather[0].main; 
     switch (main) {
         case "Snow":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/snow.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         case "Clouds":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/clouds.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         case "Fog":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/fog.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         case "Rain":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/rain.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         case "Clear":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         case "Thunderstorm":
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/thunderstorm.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
         default:
-          document.getElementById("weather-bg").style.backgroundImage =
+          document.getElementById("bg-body").style.backgroundImage =
             "url('https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif')";
+          document.getElementById("bg-body").style.backgroundRepeat =
+            "no-repeat";
+          document.getElementById("bg-body").style.backgroundSize =
+            "100% 100%";
           break;
       }
 
