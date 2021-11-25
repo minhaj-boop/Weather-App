@@ -151,8 +151,6 @@ const displayWeather = weather => {
           break;
       }
 
-
-
 }
 
 const msToTime = duration => {
